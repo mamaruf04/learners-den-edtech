@@ -2,7 +2,7 @@ import React from "react";
 
 const Video = ({video}) => {
 
-    const {title, views, duration} = video;
+    const {title, views, duration} = video || {};
   return (
       <div className="w-full flex flex-row gap-2 cursor-pointer hover:bg-slate-900 p-2 py-3">
         {/* <!-- Thumbnail --> */}

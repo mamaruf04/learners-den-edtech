@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "react-modal";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Component/Navbar/Navbar";
@@ -17,9 +18,11 @@ import LeaderBoard from "./Pages/Students/LeaderBoard/LeaderBoard";
 import Quiz from "./Pages/Students/Quiz/Quiz";
 import AdminRoute from "./Utils/AdminRoute";
 import StudentRoute from "./Utils/StudentRoute";
-
 function App() {
   const checkAuth = useAuthCheck();
+  
+
+Modal.setAppElement("#root");
 
   return checkAuth ? (
     <>
@@ -107,6 +110,7 @@ function App() {
               </AdminRoute>
             }
           />
+          <Route path="/mo" element={<App></App>}></Route>
         </Routes>
       </Router>
     </>
