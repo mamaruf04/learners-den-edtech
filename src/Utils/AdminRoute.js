@@ -6,7 +6,7 @@ import { checkUserRole } from './CheckUserRole';
 const AdminRoute = ({ children }) => {
     const currentUser = useSelector((state) => state.auth.user);
     if (!checkUserRole(currentUser, "admin")) {
-      return <Navigate to="/" />;
+      return <Navigate to="/admin/login" />;
     }
     return children;
   };

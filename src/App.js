@@ -2,6 +2,7 @@ import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Component/Navbar/Navbar";
+import PublicRoute from "./Component/PublicRoute/PublicRoute";
 import useAuthCheck from "./Hooks/UseAuthCheck";
 import AssignmentMarks from "./Pages/Admin/AssignmentMarks/AssignmentMarks";
 import Assignments from "./Pages/Admin/Assignments/Assignments";
@@ -25,10 +26,21 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<StudentLogin></StudentLogin>}></Route>
+          <Route
+            path="/"
+            element={
+              <PublicRoute>
+                <StudentLogin />
+              </PublicRoute>
+            }
+          ></Route>
           <Route
             path="/register"
-            element={<StudenntRegister></StudenntRegister>}
+            element={
+              <PublicRoute>
+                <StudenntRegister />
+              </PublicRoute>
+            }
           ></Route>
           <Route
             path="/player/:videoId"
@@ -47,7 +59,14 @@ function App() {
               </StudentRoute>
             }
           ></Route>
-          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route
+            path="/admin/login"
+            element={
+              <PublicRoute>
+                <AdminLogin />
+              </PublicRoute>
+            }
+          />
           <Route
             path="/admin/dashboard"
             element={

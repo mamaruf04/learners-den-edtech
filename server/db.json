@@ -48,6 +48,20 @@
       "role": "student",
       "name": "Arif",
       "id": 7
+    },
+    {
+      "email": "maruf@gmail.com",
+      "password": "$2a$10$aBFYefr6KKIGKqk2jLxgBupFoFykkFfpVnZKNxcGP1c6xF1tkh1I6",
+      "name": "Maruf",
+      "role": "student",
+      "id": 8
+    },
+    {
+      "email": "mamaruf04@gmail.com",
+      "password": "$2a$10$kmHUzXz6UN15CZN7wFO66OM36LkQFFBMBrz9B.uv30wvQUsxPb81m",
+      "name": "Test",
+      "role": "student",
+      "id": 9
     }
   ],
   "videos": [

@@ -107,6 +107,19 @@ const StudentLogin = () => {
                 Sign in
               </button>
             </div>
+
+            <div className="flex items-center justify-center">
+              <div className="text-sm">
+                <Link
+                  to="/admin/login"
+                  className="font-medium text-violet-600 hover:text-violet-500"
+                >
+                  Login as Admin
+                </Link>
+              </div>
+            </div>
+
+
             {error !== "" && <Error message={error} />}
           </form>
         </div>
