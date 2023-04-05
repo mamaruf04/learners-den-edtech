@@ -100,22 +100,38 @@
       "duration": "45",
       "createdAt": "2023-04-05T17:21:06.969Z",
       "id": 4
+    },
+    {
+      "title": "There is all Duglapan 50",
+      "description": "hnghghdfgb...................",
+      "url": "https://www.youtube.com/embed/E9_R88eKcBM",
+      "views": "40k",
+      "duration": "45:67",
+      "createdAt": "2023-04-05T20:29:02.972Z",
+      "id": 5
     }
   ],
   "assignments": [
     {
       "id": 1,
       "title": "Assignment 1 - Implement Debounce Function",
-      "video_id": 1,
-      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "video_id": 4,
+      "video_title": "video final test",
       "totalMark": 100
     },
     {
       "id": 2,
       "title": "Assignment 2 - Implement Best Practices",
-      "video_id": 2,
-      "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
       "totalMark": 100
+    },
+    {
+      "title": "Assignment 4 - test 2",
+      "totalMark": "100",
+      "video_id": 5,
+      "video_title": "There is all Duglapan 50",
+      "id": 3
     }
   ],
   "quizzes": [

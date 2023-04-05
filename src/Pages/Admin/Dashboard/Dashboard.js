@@ -25,7 +25,7 @@ const Dashboard = () => {
                 <p className="text-slate-200 mt-3 ">Videos</p>
               </Link>
 
-              <Link to="/admin/videos" className="dashboard-item-card">
+              <Link to="/admin/assignments" className="dashboard-item-card">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

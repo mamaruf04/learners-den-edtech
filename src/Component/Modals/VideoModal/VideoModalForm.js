@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import {
   useAddVideoMutation,
   useEditVideoMutation,
-} from "../../features/Videos/VideosApi";
-import Error from "../Error/Error";
+} from "../../../features/Videos/VideosApi";
+import Error from "../../Error/Error";
 
 const ModalForm = ({ closeModal, video = {} }) => {
   const {

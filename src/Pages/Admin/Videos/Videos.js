@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Error from "../../../Component/Error/Error";
-import AddVideoModal from "../../../Component/Modals/VideoModal";
+import AddVideoModal from "../../../Component/Modals/VideoModal/VideoModal";
 import { useGetVideosQuery } from "../../../features/Videos/VideosApi";
 import VideoTableRow from "./VideoTableRow";
 

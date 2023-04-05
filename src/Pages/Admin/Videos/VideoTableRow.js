@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AddVideoModal from '../../../Component/Modals/VideoModal';
+import AddVideoModal from '../../../Component/Modals/VideoModal/VideoModal';
 import { useDeleteVideoMutation } from '../../../features/Videos/VideosApi';
 
 const VideoTableRow = ({video}) => {
