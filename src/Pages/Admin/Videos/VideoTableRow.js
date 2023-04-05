@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AddVideoModal from '../../../Component/Modals/VideoModal';
+import { useDeleteVideoMutation } from '../../../features/Videos/VideosApi';
 
 const VideoTableRow = ({video}) => {
 
-    const {title, views, duration, description} = video || {};
+    const {title, views, duration, description, id} = video || {};
+
+    const [showModal, setShowModal] = useState(false);
+
+  const handleModalToggle = () => {
+    setShowModal(!showModal);
+  };
+
+  const [deleteVideo, { isSuccess: isDeleteVideoSuccess }] = useDeleteVideoMutation();
+
+  // delete video function
+  const handleDelete = () =>{
+    deleteVideo(id);
+  }
 
     return (
         <tr>
@@ -12,6 +27,7 @@ const VideoTableRow = ({video}) => {
         <td className="table-td">{description.slice(0,50)}....</td>
         <td className="table-td flex gap-x-2">
           <svg
+          onClick={handleDelete}
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
@@ -25,6 +41,7 @@ const VideoTableRow = ({video}) => {
             />
           </svg>
           <svg
+          onClick={handleModalToggle}
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
@@ -38,6 +55,7 @@ const VideoTableRow = ({video}) => {
             />
           </svg>
         </td>
+        {showModal && <AddVideoModal video={video} closeModal={handleModalToggle} />}
       </tr>
     );
 };

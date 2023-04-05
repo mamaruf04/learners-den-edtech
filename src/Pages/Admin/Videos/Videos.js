@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Error from "../../../Component/Error/Error";
-import Modal from "../../../Component/Modals/AddVideoModal";
+import AddVideoModal from "../../../Component/Modals/VideoModal";
 import { useGetVideosQuery } from "../../../features/Videos/VideosApi";
 import VideoTableRow from "./VideoTableRow";
 
@@ -41,7 +41,7 @@ const Videos = () => {
               <button onClick={handleModalToggle} className="btn ml-auto">
                 Add Video
               </button>
-              {showModal && <Modal closeModal={handleModalToggle} />}
+              {showModal && <AddVideoModal closeModal={handleModalToggle} />}
             </div>
             <div className="overflow-x-auto mt-4">
               <table className="divide-y-1 text-base divide-gray-600 w-full">

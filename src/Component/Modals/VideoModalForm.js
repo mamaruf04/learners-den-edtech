@@ -1,26 +1,61 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import {
+  useAddVideoMutation,
+  useEditVideoMutation,
+} from "../../features/Videos/VideosApi";
+import Error from "../Error/Error";
 
-const ModalForm = ({ closeModal }) => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [url, setUrl] = useState("");
-  const [views, setViews] = useState("");
-  const [duration, setDuration] = useState("");
+const ModalForm = ({ closeModal, video = {} }) => {
+  const {
+    title: perviousTitle,
+    views: perviousView,
+    duration: perviousDuration,
+    description: perviousDescription,
+    url: previousUrl,
+  } = video || {};
+
+  const [title, setTitle] = useState(perviousTitle);
+  const [description, setDescription] = useState(perviousDescription);
+  const [url, setUrl] = useState(previousUrl);
+  const [views, setViews] = useState(perviousView);
+  const [duration, setDuration] = useState(perviousDuration);
+
+  const [
+    addVideo,
+    { isSuccess: isAddVideoSuccess, isError: isAddErr, error: adderr },
+  ] = useAddVideoMutation();
+
+  const [
+    editVideo,
+    { isSuccess: isEditVideoSuccess, isError: isEditErr, error: editErr },
+  ] = useEditVideoMutation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const date = new Date();
     const videoData = {
       title: title,
       description: description,
       url: url,
       views: views,
       duration: duration,
+      createdAt: date.toISOString(),
     };
-    console.log(videoData);
+    if (video.id) {
+      editVideo({ videoId: video.id, data: videoData });
+    } else {
+      addVideo(videoData);
+    }
   };
+
+  useEffect(() => {
+    if (isAddVideoSuccess || isEditVideoSuccess) {
+      closeModal();
+    }
+  }, [isAddVideoSuccess, closeModal, isEditVideoSuccess]);
+
   return (
     <>
-      
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
@@ -120,6 +155,9 @@ const ModalForm = ({ closeModal }) => {
             Cancel
           </button>
         </div>
+        {isAddErr || isEditErr ? (
+            <Error message={'Something went wrong!'}></Error>
+          ) : null}
       </form>
     </>
   );
