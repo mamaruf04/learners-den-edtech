@@ -87,7 +87,7 @@ export const VideosApi = apiSlice.injectEndpoints({
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         const videoDelete = dispatch(
           apiSlice.util.updateQueryData("getVideos", undefined, (draft) => {
-            console.log(JSON.stringify(draft));
+            // console.log(JSON.stringify(draft));
             return draft.filter((video) => video.id != arg);
           })
         );

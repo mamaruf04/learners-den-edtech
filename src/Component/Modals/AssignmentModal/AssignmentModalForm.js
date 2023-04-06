@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {
-    useAddAssignmentMutation,
-    useEditAssignmentMutation,
-    useGetAssignmentsQuery,
+  useAddAssignmentMutation,
+  useEditAssignmentMutation,
+  useGetAssignmentsQuery,
 } from "../../../features/Assignments/AssignmentsApi";
 import { useGetVideosQuery } from "../../../features/Videos/VideosApi";
 import Error from "../../Error/Error";
@@ -39,7 +39,7 @@ const AssignmentModalForm = ({ closeModal, assignment = {} }) => {
 
   //   get the rest videos list where weren't added any assignment.
   const restVideosForAssignment = (video) =>
-    !assignments?.some((assignment) => assignment.video_title === video.title);
+    !assignments?.some((assignment) => assignment.video_id === video.id);
 
   //   dropdown handler
   const [selectedOption, setSelectedOption] = useState(previousVideo_title);
@@ -128,7 +128,9 @@ const AssignmentModalForm = ({ closeModal, assignment = {} }) => {
             value={selectedOption}
             onChange={handleOptionChange}
           >
-            <option value="">Select a video</option>
+            <option value={assignment.id ? previousVideo_title : ""}>
+              {assignment.id ? previousVideo_title : "Select a video"}
+            </option>
             {content}
           </select>
         </div>
@@ -150,6 +152,11 @@ const AssignmentModalForm = ({ closeModal, assignment = {} }) => {
             required
           />
         </div>
+
+        {/* checking any video rest to take assignment */}
+        {videos?.filter(restVideosForAssignment).length === 0 ? (
+          <Error message={"No video rest to take assignment"}></Error>
+        ) : null}
 
         <div className="flex justify-center mt-6">
           <input

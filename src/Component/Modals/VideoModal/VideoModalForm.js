@@ -22,12 +22,12 @@ const ModalForm = ({ closeModal, video = {} }) => {
 
   const [
     addVideo,
-    { isSuccess: isAddVideoSuccess, isError: isAddErr, error: adderr },
+    { isSuccess: isAddVideoSuccess, isError: isAddErr},
   ] = useAddVideoMutation();
 
   const [
     editVideo,
-    { isSuccess: isEditVideoSuccess, isError: isEditErr, error: editErr },
+    { isSuccess: isEditVideoSuccess, isError: isEditErr},
   ] = useEditVideoMutation();
 
   const handleSubmit = (e) => {

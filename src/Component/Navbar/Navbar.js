@@ -31,7 +31,7 @@ const Navbar = () => {
             ) : (
                 <>
                  <Link onClick={logout} to="/">Switch to Student</Link>
-                 <Link to={"/admin/dashboard"} className="font-bold">{currentUser.name}</Link>
+                 <Link to={"/admin/dashboard"} className="font-bold">Dashboard</Link>
                 </>
             )}
 

@@ -85,38 +85,20 @@
     },
     {
       "title": "There is all Duglapan 18",
-      "description": "trhrthrgd",
-      "url": "https://www.youtube.com/embed/dD9O8DnIBj4",
-      "views": "564",
-      "duration": "566k",
-      "createdAt": "2023-04-05T17:03:29.058Z",
-      "id": 3
-    },
-    {
-      "title": "video final test",
-      "description": "test test test test test",
+      "description": "hrtfhgftghtf",
       "url": "https://www.youtube.com/embed/E9_R88eKcBM",
-      "views": "52k",
+      "views": "150k",
       "duration": "45",
-      "createdAt": "2023-04-05T17:21:06.969Z",
+      "createdAt": "2023-04-06T19:47:36.807Z",
       "id": 4
-    },
-    {
-      "title": "There is all Duglapan 50",
-      "description": "hnghghdfgb...................",
-      "url": "https://www.youtube.com/embed/E9_R88eKcBM",
-      "views": "40k",
-      "duration": "45:67",
-      "createdAt": "2023-04-05T20:29:02.972Z",
-      "id": 5
     }
   ],
   "assignments": [
     {
       "id": 1,
       "title": "Assignment 1 - Implement Debounce Function",
-      "video_id": 4,
-      "video_title": "video final test",
+      "video_id": 2,
+      "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
       "totalMark": 100
     },
     {
@@ -127,11 +109,11 @@
       "totalMark": 100
     },
     {
-      "title": "Assignment 4 - test 2",
+      "title": "Assignment 3 - test 2",
       "totalMark": "100",
-      "video_id": 5,
-      "video_title": "There is all Duglapan 50",
-      "id": 3
+      "video_id": 4,
+      "video_title": "There is all Duglapan 18",
+      "id": 4
     }
   ],
   "quizzes": [
@@ -192,32 +174,32 @@
       ]
     },
     {
-      "id": 3,
-      "question": "What is the difference between null and undefined in JavaScript?",
+      "question": "what is the .....?",
       "video_id": 2,
       "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
       "options": [
         {
-          "id": 1,
-          "option": "null represents the intentional absence of any object value.",
+          "id": "1",
+          "option": "te1",
+          "isCorrect": false
+        },
+        {
+          "id": "2",
+          "option": "tw2",
+          "isCorrect": false
+        },
+        {
+          "id": "3",
+          "option": "tew4",
           "isCorrect": true
         },
         {
-          "id": 2,
-          "option": "undefined represents the uninitialized value of a variable or property.",
-          "isCorrect": false
-        },
-        {
-          "id": 3,
-          "option": "Same thing",
-          "isCorrect": false
-        },
-        {
-          "id": 4,
-          "option": "No Difference",
-          "isCorrect": false
+          "id": "4",
+          "option": "we2",
+          "isCorrect": true
         }
-      ]
+      ],
+      "id": 3
     }
   ],
   "assignmentMark": [

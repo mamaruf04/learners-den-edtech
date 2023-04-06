@@ -9,7 +9,7 @@ import AssignmentMarks from "./Pages/Admin/AssignmentMarks/AssignmentMarks";
 import Assignments from "./Pages/Admin/Assignments/Assignments";
 import AdminLogin from "./Pages/Admin/Authentication/AdminLogin";
 import Dashboard from "./Pages/Admin/Dashboard/Dashboard";
-import Quizes from "./Pages/Admin/Quizes/Quizes";
+import Quizes from "./Pages/Admin/Quizzes/Quizzes";
 import Videos from "./Pages/Admin/Videos/Videos";
 import StudenntRegister from "./Pages/Students/Authentication/StudenntRegister";
 import StudentLogin from "./Pages/Students/Authentication/StudentLogin";

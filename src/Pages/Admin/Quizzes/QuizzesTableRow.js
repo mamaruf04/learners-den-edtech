@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import AssignmentModal from "../../../Component/Modals/AssignmentModal/AssignmemtModal";
-import { useDeleteAssignmentMutation } from "../../../features/Assignments/AssignmentsApi";
+import QuizModal from "../../../Component/Modals/QuizeModal/QuizModal";
+import { useDeleteQuizeMutation } from "../../../features/QuizzesApi/QuizzesApi";
 
-const AssignmentsTableRow = ({ assignment }) => {
-  const { title, video_title, totalMark, id} = assignment || {};
+const QuizzesTableRow = ({ quize }) => {
+  const { question, video_title, options, id, video_id } = quize || {};
 
   const [showModal, setShowModal] = useState(false);
 
@@ -11,20 +11,25 @@ const AssignmentsTableRow = ({ assignment }) => {
     setShowModal(!showModal);
   };
 
-  const [deleteAssignment] =
-    useDeleteAssignmentMutation();
+  const [deleteQuize, { isSuccess: isDeleteVideoSuccess }] =
+    useDeleteQuizeMutation();
 
   // delete video function
   const handleDelete = () => {
-    deleteAssignment(id);
+    deleteQuize(id);
   };
 
   return (
     <tr>
-      <td className="table-td">{title}</td>
-      <td className="table-td">{video_title}</td>
-      <td className="table-td">{totalMark}</td>
-      <td className="table-td flex gap-x-2">
+      <td className="table-td">
+        {question.slice(0, 60)}
+        {question.length > 60 && "....."}
+      </td>
+      <td className="table-td">
+        {video_title.slice(0, 60)}
+        {video_title.length > 60 && "....."}
+      </td>
+      <td className="table-td flex gap-x-2 justify-center">
         <svg
           onClick={handleDelete}
           fill="none"
@@ -54,14 +59,9 @@ const AssignmentsTableRow = ({ assignment }) => {
           />
         </svg>
       </td>
-      {showModal && (
-        <AssignmentModal
-          assignment={assignment}
-          closeModal={handleModalToggle}
-        />
-      )}
+      {showModal && <QuizModal quize={quize} closeModal={handleModalToggle} />}
     </tr>
   );
 };
 
-export default AssignmentsTableRow;
+export default QuizzesTableRow;
