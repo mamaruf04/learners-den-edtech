@@ -20,9 +20,8 @@ import AdminRoute from "./Utils/AdminRoute";
 import StudentRoute from "./Utils/StudentRoute";
 function App() {
   const checkAuth = useAuthCheck();
-  
 
-Modal.setAppElement("#root");
+  Modal.setAppElement("#root");
 
   return checkAuth ? (
     <>
@@ -53,7 +52,14 @@ Modal.setAppElement("#root");
               </StudentRoute>
             }
           />
-          <Route path="/quize/:videoId" element={<Quiz />} />
+          <Route
+            path="/quize/:videoId"
+            element={
+              <StudentRoute>
+                <Quiz />
+              </StudentRoute>
+            }
+          />
           <Route
             path="/leaderboard"
             element={

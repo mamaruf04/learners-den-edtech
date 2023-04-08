@@ -91,6 +91,15 @@
       "duration": "45",
       "createdAt": "2023-04-06T19:47:36.807Z",
       "id": 4
+    },
+    {
+      "title": "There is all Duglapan 14",
+      "description": "lorem ....ghtfhrtf ghtrfhf etgtrd",
+      "url": "https://www.youtube.com/embed/dD9O8DnIBj4",
+      "views": "45k",
+      "duration": "45:34",
+      "createdAt": "2023-04-08T13:47:48.612Z",
+      "id": 5
     }
   ],
   "assignments": [
@@ -99,7 +108,7 @@
       "title": "Assignment 1 - Implement Debounce Function",
       "video_id": 2,
       "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
-      "totalMark": 100
+      "totalMark": "100"
     },
     {
       "id": 2,
@@ -109,11 +118,11 @@
       "totalMark": 100
     },
     {
-      "title": "Assignment 3 - test 2",
+      "title": "Assignment 4 - test 2",
       "totalMark": "100",
       "video_id": 4,
       "video_title": "There is all Duglapan 18",
-      "id": 4
+      "id": 3
     }
   ],
   "quizzes": [
@@ -174,7 +183,7 @@
       ]
     },
     {
-      "question": "what is the .....?",
+      "question": "what is the main reason?",
       "video_id": 2,
       "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
       "options": [
@@ -200,6 +209,174 @@
         }
       ],
       "id": 3
+    },
+    {
+      "question": "what is js?",
+      "video_id": 2,
+      "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
+      "options": [
+        {
+          "id": "1",
+          "option": "java",
+          "isCorrect": false
+        },
+        {
+          "id": "2",
+          "option": "javascript",
+          "isCorrect": true
+        },
+        {
+          "id": "3",
+          "option": "jaquary",
+          "isCorrect": false
+        },
+        {
+          "id": "4",
+          "option": "joblin",
+          "isCorrect": false
+        }
+      ],
+      "id": 4
+    },
+    {
+      "question": "what is the test?",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "options": [
+        {
+          "id": "1",
+          "option": "mt1",
+          "isCorrect": false
+        },
+        {
+          "id": "2",
+          "option": "mt2",
+          "isCorrect": false
+        },
+        {
+          "id": "3",
+          "option": "mt3",
+          "isCorrect": true
+        },
+        {
+          "id": "4",
+          "option": "mt4",
+          "isCorrect": false
+        }
+      ],
+      "id": 5
+    },
+    {
+      "question": "what is the .....?",
+      "video_id": 4,
+      "video_title": "There is all Duglapan 18",
+      "options": [
+        {
+          "id": "1",
+          "option": "ai",
+          "isCorrect": false
+        },
+        {
+          "id": "2",
+          "option": "bi ",
+          "isCorrect": true
+        },
+        {
+          "id": "3",
+          "option": "vi",
+          "isCorrect": true
+        },
+        {
+          "id": "4",
+          "option": "dt",
+          "isCorrect": false
+        }
+      ],
+      "id": 6
+    },
+    {
+      "question": "what is the mre .....?",
+      "video_id": 2,
+      "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
+      "options": [
+        {
+          "id": "1",
+          "option": "rt",
+          "isCorrect": true
+        },
+        {
+          "id": "2",
+          "option": "et",
+          "isCorrect": false
+        },
+        {
+          "id": "3",
+          "option": "er",
+          "isCorrect": false
+        },
+        {
+          "id": "4",
+          "option": "ert",
+          "isCorrect": true
+        }
+      ],
+      "id": 7
+    },
+    {
+      "question": "what is the  dfdsfdwaedqw.....?",
+      "video_id": 5,
+      "video_title": "There is all Duglapan 14",
+      "options": [
+        {
+          "id": "1",
+          "option": "er",
+          "isCorrect": true
+        },
+        {
+          "id": "2",
+          "option": "ereer",
+          "isCorrect": false
+        },
+        {
+          "id": "3",
+          "option": "ere",
+          "isCorrect": false
+        },
+        {
+          "id": "4",
+          "option": "rerererere",
+          "isCorrect": true
+        }
+      ],
+      "id": 8
+    },
+    {
+      "question": "what is the double?",
+      "video_id": 5,
+      "video_title": "There is all Duglapan 14",
+      "options": [
+        {
+          "id": "1",
+          "option": "1",
+          "isCorrect": false
+        },
+        {
+          "id": "2",
+          "option": "2",
+          "isCorrect": true
+        },
+        {
+          "id": "3",
+          "option": "34",
+          "isCorrect": false
+        },
+        {
+          "id": "4",
+          "option": "4",
+          "isCorrect": false
+        }
+      ],
+      "id": 9
     }
   ],
   "assignmentMark": [
@@ -211,9 +388,9 @@
       "title": "Assignment 1 - Implement Debounce Function",
       "createdAt": "2021-01-15T15:17:01.727Z",
       "totalMark": 100,
-      "mark": 0,
+      "mark": "96",
       "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
-      "status": "pending"
+      "status": "published"
     },
     {
       "id": 2,
@@ -225,19 +402,43 @@
       "totalMark": 100,
       "mark": 100,
       "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
-      "status": "published"
+      "status": "pending"
     },
     {
-      "id": 2,
+      "id": 3,
       "student_id": 3,
       "student_name": "Akash Ahmed",
       "assignment_id": 1,
       "title": "Assignment 2 - Implement Best Practices",
       "createdAt": "2021-01-15T15:17:01.727Z",
       "totalMark": 100,
-      "mark": 50,
+      "mark": "100",
       "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
       "status": "published"
+    },
+    {
+      "student_id": 8,
+      "student_name": "Maruf",
+      "assignment_id": 3,
+      "title": "Assignment 3 - Implement Best Practices",
+      "createdAt": "2023-04-08T11:34:22.631Z",
+      "totalMark": "100",
+      "mark": "95",
+      "repo_link": "http://localhost:9000/assignments",
+      "status": "published",
+      "id": 4
+    },
+    {
+      "title": "Assignment 2 - Implement Best Practices",
+      "student_id": 8,
+      "student_name": "Maruf",
+      "assignment_id": 2,
+      "createdAt": "2023-04-08T14:18:18.233Z",
+      "totalMark": 100,
+      "mark": null,
+      "repo_link": "There is all Duglapan 12",
+      "status": "pending",
+      "id": 5
     }
   ],
   "quizMark": [
@@ -252,6 +453,114 @@
       "totalWrong": 1,
       "totalMark": 10,
       "mark": 5
+    },
+    {
+      "student_id": 8,
+      "student_name": "Maruf",
+      "video_id": 2,
+      "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
+      "totalQuiz": 2,
+      "totalCorrect": 2,
+      "totalWrong": 0,
+      "totalMark": 10,
+      "mark": 5,
+      "id": 2
+    },
+    {
+      "student_id": 8,
+      "student_name": "Maruf",
+      "video_id": 4,
+      "video_title": "There is all Duglapan 18",
+      "totalQuiz": 1,
+      "totalCorrect": 0,
+      "totalWrong": 1,
+      "totalMark": 0,
+      "mark": 5,
+      "id": 3
+    },
+    {
+      "student_id": 8,
+      "student_name": "Maruf",
+      "video_id": 4,
+      "video_title": "There is all Duglapan 18",
+      "totalQuiz": 1,
+      "totalCorrect": 0,
+      "totalWrong": 1,
+      "totalMark": 0,
+      "mark": 5,
+      "id": 4
+    },
+    {
+      "student_id": 3,
+      "student_name": "Akash Ahmed",
+      "video_id": 5,
+      "video_title": "There is all Duglapan 14",
+      "totalQuiz": 2,
+      "totalCorrect": 0,
+      "totalWrong": 2,
+      "totalMark": 0,
+      "mark": 5,
+      "id": 5
+    },
+    {
+      "student_id": 3,
+      "student_name": "Akash Ahmed",
+      "video_id": 5,
+      "video_title": "There is all Duglapan 14",
+      "totalQuiz": 2,
+      "totalCorrect": 0,
+      "totalWrong": 2,
+      "totalMark": 0,
+      "mark": 5,
+      "id": 6
+    },
+    {
+      "student_id": 8,
+      "student_name": "Maruf",
+      "video_id": 5,
+      "video_title": "There is all Duglapan 14",
+      "totalQuiz": 2,
+      "totalCorrect": 0,
+      "totalWrong": 2,
+      "totalMark": 0,
+      "mark": 5,
+      "id": 7
+    },
+    {
+      "student_id": 6,
+      "student_name": "Riyadh",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "totalQuiz": 3,
+      "totalCorrect": 1,
+      "totalWrong": 2,
+      "totalMark": 5,
+      "mark": 5,
+      "id": 8
+    },
+    {
+      "student_id": 6,
+      "student_name": "Riyadh",
+      "video_id": 2,
+      "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
+      "totalQuiz": 3,
+      "totalCorrect": 2,
+      "totalWrong": 1,
+      "totalMark": 10,
+      "mark": 5,
+      "id": 9
+    },
+    {
+      "student_id": 6,
+      "student_name": "Riyadh",
+      "video_id": 4,
+      "video_title": "There is all Duglapan 18",
+      "totalQuiz": 1,
+      "totalCorrect": 2,
+      "totalWrong": -1,
+      "totalMark": 10,
+      "mark": 5,
+      "id": 10
     }
   ]
 }

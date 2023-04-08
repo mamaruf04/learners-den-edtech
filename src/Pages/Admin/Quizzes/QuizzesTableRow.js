@@ -11,8 +11,7 @@ const QuizzesTableRow = ({ quize }) => {
     setShowModal(!showModal);
   };
 
-  const [deleteQuize, { isSuccess: isDeleteVideoSuccess }] =
-    useDeleteQuizeMutation();
+  const [deleteQuize] = useDeleteQuizeMutation();
 
   // delete video function
   const handleDelete = () => {

@@ -5,7 +5,12 @@ const initialState = {};
 const QuizzesSlice = createSlice({
   name: "quizzes",
   initialState,
-  reducers: {},
+  reducers: {
+    userAns: (state, action) => {
+      state[action.payload.id] = action.payload.isCorrect;
+    },
+  },
 });
 
+export const { userAns } = QuizzesSlice.actions;
 export default QuizzesSlice.reducer;

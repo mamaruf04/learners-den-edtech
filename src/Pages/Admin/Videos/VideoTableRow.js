@@ -15,7 +15,7 @@ const VideoTableRow = ({ video }) => {
     setShowModal(!showModal);
   };
 
-  const [deleteVideo, { isSuccess: isvideoDeleteSuccess }] =
+  const [deleteVideo] =
     useDeleteVideoMutation();
   const [deleteAssignment] = useDeleteAssignmentMutation();
 
