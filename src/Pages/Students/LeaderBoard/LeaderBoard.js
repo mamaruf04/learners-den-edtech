@@ -60,7 +60,7 @@ const LeaderBoard = () => {
       const totalMark = totalQuizMark + totalAssignmentMark;
 
       leaderboard.push({
-        id:studentId,
+        id: studentId,
         name: studentName,
         quizMark: totalQuizMark,
         assignmentMark: totalAssignmentMark,
@@ -68,21 +68,30 @@ const LeaderBoard = () => {
       });
     }
 
-    // sort the leaderboard by total mark in descending order
+    // initialize rank to 1
+    let rank = 1;
+
+    // sort leaderboard by total marks + total quiz marks in descending order
     leaderboard.sort((a, b) => b.totalMark - a.totalMark);
 
-    // add rank to the leaderboard
-    leaderboard.forEach((student, index) => {
-      student.rank = index + 1;
-    });
+    // loop over sorted leaderboard and assign ranks
+    for (let i = 0; i < leaderboard.length; i++) {
+      if (i > 0 && leaderboard[i].totalMark !== leaderboard[i - 1].totalMark) {
+        // increment rank only if the current student's total marks + total quiz marks is less than the previous student's total marks + total quiz marks
+        rank++;
+      }
+
+      // assign rank to current student
+      leaderboard[i].rank = rank;
+    }
 
     return leaderboard;
   }
 
   // example usage
   const leaderboard = getLeaderboard();
-  
-  const myRank = leaderboard.find(user => user.id === my?.id)
+
+  const myRank = leaderboard.find((user) => user.id === my?.id);
   console.log(myRank);
 
   // ------------------------------------------------
@@ -107,11 +116,21 @@ const LeaderBoard = () => {
 
               <tbody>
                 <tr className="border-2 border-cyan">
-                  <td className="table-td text-center font-bold">{myRank.rank}</td>
-                  <td className="table-td text-center font-bold">{myRank.name}</td>
-                  <td className="table-td text-center font-bold">{myRank.quizMark}</td>
-                  <td className="table-td text-center font-bold">{myRank.assignmentMark}</td>
-                  <td className="table-td text-center font-bold">{myRank.totalMark}</td>
+                  <td className="table-td text-center font-bold">
+                    {myRank.rank}
+                  </td>
+                  <td className="table-td text-center font-bold">
+                    {myRank.name}
+                  </td>
+                  <td className="table-td text-center font-bold">
+                    {myRank.quizMark}
+                  </td>
+                  <td className="table-td text-center font-bold">
+                    {myRank.assignmentMark}
+                  </td>
+                  <td className="table-td text-center font-bold">
+                    {myRank.totalMark}
+                  </td>
                 </tr>
               </tbody>
             </table>
