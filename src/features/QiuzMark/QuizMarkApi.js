@@ -62,34 +62,6 @@ export const QuizzesApi = apiSlice.injectEndpoints({
       },
     }),
 
-    // edit Mark api
-    editQuizMark: builder.mutation({
-      query: ({ quizMarkId, data }) => ({
-        url: `/quizMark/${quizMarkId}`,
-        method: "PATCH",
-        body: data,
-      }),
-
-      async onQueryStarted(arg, { queryFulfilled, dispatch }) {
-        const quizMarkUpdate = dispatch(
-          apiSlice.util.updateQueryData("getQuizMark", undefined, (draft) => {
-            const draftQuizMark = draft.find((quize) => quize.id == arg.quizeId);
-            // console.log(JSON.stringify(draftQuize));
-            // draftQuizMark.id = arg.quizeId;
-            // draftQuizMark.question = arg.data.question;
-            // draftQuizMark.video_id = arg.data.video_id;
-            // draftQuizMark.options = arg.data.options;
-            // draftQuizMark.video_title = arg.data.video_title;
-          })
-        );
-        try {
-          await queryFulfilled;
-        } catch (error) {
-          quizMarkUpdate.undo();
-        }
-      },
-    }),
-
     deleteQuize: builder.mutation({
       query: (quizMarkId) => ({
         url: `/quizMark/${quizMarkId}`,

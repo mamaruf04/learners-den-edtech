@@ -30,7 +30,7 @@ const AssignmentMarkTableRow = ({ assignmentMark }) => {
       title,
       createdAt,
       totalMark,
-      mark: updatedMark,
+      mark: parseFloat(updatedMark),
       repo_link,
       status: "published",
     };
