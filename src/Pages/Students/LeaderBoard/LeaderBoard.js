@@ -94,6 +94,8 @@ const LeaderBoard = () => {
   const myRank = leaderboard.find((user) => user.id === my?.id);
   console.log(myRank);
 
+  const top20 = leaderboard.slice(0, 20);
+
   // ------------------------------------------------
 
   // console.log(users);
@@ -150,7 +152,7 @@ const LeaderBoard = () => {
               </thead>
 
               <tbody>
-                {leaderboard.map((user) => (
+                {top20.map((user) => (
                   <tr className="border-b border-slate-600/50">
                     <td className="table-td text-center">{user.rank}</td>
                     <td className="table-td text-center">{user.name}</td>
